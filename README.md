@@ -1,5 +1,5 @@
 # Title: Google Form
-* Click [here](./dist/index.html) to view the project.
+* Click [here](https://mercado-joshua.github.io/google-form/) to view the project.
 * Checkout src folder for source code.
 <br>
 ***Note:*** the `dist's css folder` is intended to be uncompressed to let others view the CSS code in a readable format.
