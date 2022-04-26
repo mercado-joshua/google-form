@@ -1,0 +1,30 @@
+.submit-btn,
+.clear-btn {
+    background: transparent;
+}
+
+.submit-btn {
+    background: #673AB7;
+    color: #fff;
+    border-radius: .3rem;
+    padding: .7rem 1.5rem;
+    font-weight: bold;
+
+    transition: 
+        opacity 250ms ease-in-out,
+        transform 150ms ease;
+
+    &:focus,
+    &:hover {
+        opacity: .7;
+    }
+
+    &:active {
+        transform: scale(.99);
+    }
+}
+
+.clear-btn {
+    font-weight: bold;
+    color: #673AB7;
+}

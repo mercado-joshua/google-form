@@ -1,0 +1,211 @@
+@use '../utils/breakpoints';
+
+.form-section {
+    padding: 1rem 0;
+}
+
+.google-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .error {
+        display: none;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    input[type="radio"] {
+        width: 1.5rem;
+        height: 1.5rem;
+        accent-color: #673AB7;
+    }
+
+    > .formbox {
+        &:first-child {
+            > .headerbox {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            > .accountbox {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                > .icon {
+                    align-self: flex-start;
+                }
+
+                > .profilebox {
+                    display: flex;
+                    align-items: baseline;
+                    gap: 1rem;
+
+                    > .userbox {
+                        display: flex;
+                        flex-direction: column;
+
+                        @include breakpoints.media-breakpoint-up(630px) {
+                            flex-direction: row;
+                            gap: 1rem;
+                        }
+                    }    
+                }
+
+                @include breakpoints.media-breakpoint-up(700px) {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: baseline;
+                }
+            }
+        }
+
+        // targets the 2nd .formbox
+        &:nth-child(2n) {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            > .radiobox {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 1rem;
+
+                > .radios {
+                    flex: 1;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(2rem, auto));
+                    justify-content: space-between;
+                    gap: 1rem;
+
+
+                    > .block {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 1rem;
+                    }
+                }
+            }
+        }
+
+        // targets the 3rd .formbox
+        &:nth-child(3n) {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            > .radios {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                > .block {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                }
+            }
+        }
+
+         // targets the 4th .formbox
+         &:nth-child(4n) {
+            > .radios {
+                display: flex;
+                flex-direction: column;
+                gap: .3rem;
+
+                > .block {
+                    display: grid;
+                    grid-template-columns: repeat(6, 1fr);
+                    align-items: center;
+                    gap: .5rem;
+                    padding: 1rem .5rem;
+                    border-radius: .3rem;
+
+                    // affect all rows except the 1st row
+                    &:not(:first-child) {
+                        background: #F8F9FA;
+                    }
+
+                    // set grids for the numbers
+                    &:first-child {
+                        > .number:nth-child(1n) {
+                            grid-column: 2/3;
+                        }
+
+                        > .number:nth-child(2n) {
+                            grid-column: 3/4;
+                        }
+
+                        > .number:nth-child(3n) {
+                            grid-column: 4/5;
+                        }
+
+                        > .number:nth-child(4n) {
+                            grid-column: 5/6;
+                        }
+
+                        > .number:nth-child(5n) {
+                            grid-column: 6/7;
+                        }
+                    }
+                }
+            } 
+         }
+
+         // targets the 5th .formbox
+         &:nth-child(5n) {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            > .block {
+                > .response {
+                    border: 0;
+                    border-bottom: solid #DADCE0;
+                    width: 100%;
+                    padding: .5rem;
+                    transition: all 150ms ease-in-out;
+
+                    &:focus {
+                        outline: 0;
+                        border-bottom: solid #673AB7;
+                    }
+                }
+            }
+         }
+    }
+
+    > .submitbox {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        > .actionbox {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .footerbox {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        > .contentbox {
+            > .description {
+                text-align: center;
+            }
+        }
+
+        > .imagebox {
+            max-width: 200px;
+            margin: 0 auto;
+        }
+    }
+}

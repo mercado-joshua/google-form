@@ -1,0 +1,437 @@
+*:where(::before, ::after) {
+  box-sizing: border-box;
+}
+
+ul, ol, p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+:where(ul, ol) > li {
+  list-style: none;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+body {
+  background: #F0EBF8;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+[class*=-btn] {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  border-style: none;
+  height: auto;
+}
+
+.max-wrapper {
+  max-width: 768px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.form-section {
+  padding: 1rem 0;
+}
+
+.google-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+.google-form .error {
+  display: none;
+  gap: 1rem;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.google-form input[type=radio] {
+  width: 1.5rem;
+  height: 1.5rem;
+  accent-color: #673AB7;
+}
+.google-form > .formbox:first-child > .headerbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+.google-form > .formbox:first-child > .accountbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+.google-form > .formbox:first-child > .accountbox > .icon {
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+}
+.google-form > .formbox:first-child > .accountbox > .profilebox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  gap: 1rem;
+}
+.google-form > .formbox:first-child > .accountbox > .profilebox > .userbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media only screen and (min-width: 630px) {
+  .google-form > .formbox:first-child > .accountbox > .profilebox > .userbox {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 1rem;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .google-form > .formbox:first-child > .accountbox {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+.google-form > .formbox:nth-child(2n) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+.google-form > .formbox:nth-child(2n) > .radiobox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
+}
+.google-form > .formbox:nth-child(2n) > .radiobox > .radios {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(2rem, auto));
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
+}
+.google-form > .formbox:nth-child(2n) > .radiobox > .radios > .block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+.google-form > .formbox:nth-child(3n) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+.google-form > .formbox:nth-child(3n) > .radios {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+.google-form > .formbox:nth-child(3n) > .radios > .block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+.google-form > .formbox:nth-child(4n) > .radios {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.3rem;
+}
+.google-form > .formbox:nth-child(4n) > .radios > .block {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0.5rem;
+  border-radius: 0.3rem;
+}
+.google-form > .formbox:nth-child(4n) > .radios > .block:not(:first-child) {
+  background: #F8F9FA;
+}
+.google-form > .formbox:nth-child(4n) > .radios > .block:first-child > .number:nth-child(1n) {
+  grid-column: 2/3;
+}
+.google-form > .formbox:nth-child(4n) > .radios > .block:first-child > .number:nth-child(2n) {
+  grid-column: 3/4;
+}
+.google-form > .formbox:nth-child(4n) > .radios > .block:first-child > .number:nth-child(3n) {
+  grid-column: 4/5;
+}
+.google-form > .formbox:nth-child(4n) > .radios > .block:first-child > .number:nth-child(4n) {
+  grid-column: 5/6;
+}
+.google-form > .formbox:nth-child(4n) > .radios > .block:first-child > .number:nth-child(5n) {
+  grid-column: 6/7;
+}
+.google-form > .formbox:nth-child(5n) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+.google-form > .formbox:nth-child(5n) > .block > .response {
+  border: 0;
+  border-bottom: solid #DADCE0;
+  width: 100%;
+  padding: 0.5rem;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+.google-form > .formbox:nth-child(5n) > .block > .response:focus {
+  outline: 0;
+  border-bottom: solid #673AB7;
+}
+.google-form > .submitbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+.google-form > .submitbox > .actionbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.google-form .footerbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+.google-form .footerbox > .contentbox > .description {
+  text-align: center;
+}
+.google-form .footerbox > .imagebox {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.submit-btn,
+.clear-btn {
+  background: transparent;
+}
+
+.submit-btn {
+  background: #673AB7;
+  color: #fff;
+  border-radius: 0.3rem;
+  padding: 0.7rem 1.5rem;
+  font-weight: bold;
+  -webkit-transition: opacity 250ms ease-in-out, -webkit-transform 150ms ease;
+  transition: opacity 250ms ease-in-out, -webkit-transform 150ms ease;
+  transition: opacity 250ms ease-in-out, transform 150ms ease;
+  transition: opacity 250ms ease-in-out, transform 150ms ease, -webkit-transform 150ms ease;
+}
+.submit-btn:focus, .submit-btn:hover {
+  opacity: 0.7;
+}
+.submit-btn:active {
+  -webkit-transform: scale(0.99);
+      -ms-transform: scale(0.99);
+          transform: scale(0.99);
+}
+
+.clear-btn {
+  font-weight: bold;
+  color: #673AB7;
+}
+
+.google-form > .formbox {
+  background: #fff;
+  border: 0.01rem solid #DADCE0;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.199);
+}
+.google-form > .formbox .title {
+  font-size: 1.3rem;
+}
+.google-form > .formbox .error {
+  color: red;
+}
+.google-form > .formbox .error > .icon {
+  font-size: 1.5rem;
+}
+.google-form > .formbox:first-child {
+  border-top: 1rem solid #673AB7;
+  padding: 0;
+}
+.google-form > .formbox:first-child > .headerbox,
+.google-form > .formbox:first-child > .accountbox {
+  padding: 1rem 2rem;
+}
+.google-form > .formbox:first-child .accountbox {
+  border-top: 0.01rem solid #DADCE0;
+}
+.google-form > .formbox:first-child .accountbox > .profilebox > .userbox > .email > .highlight {
+  font-weight: bold;
+  color: #5F6368;
+}
+.google-form > .formbox.-error {
+  border-color: red;
+}
+.google-form > .formbox.-error .error {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
